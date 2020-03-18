@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>EasyAbp.UniappManagement</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.MongoDB" Version="2.2.1" />
+    <ProjectReference Include="..\EasyAbp.UniappManagement.Domain\EasyAbp.UniappManagement.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
