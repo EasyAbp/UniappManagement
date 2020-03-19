@@ -39,4 +39,10 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Uniapps\Uniapp\CreateModal.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Uniapps\Uniapp\EditModal.cshtml" />
+    <_ContentIncludedByDefault Remove="Pages\Uniapps\Uniapp\Index.cshtml" />
+  </ItemGroup>
+
 </Project>

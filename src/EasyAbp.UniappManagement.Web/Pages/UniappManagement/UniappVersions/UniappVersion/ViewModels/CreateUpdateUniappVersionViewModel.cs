@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EasyAbp.UniappManagement.Web.Pages.UniappVersions.UniappVersion.ViewModels
+namespace EasyAbp.UniappManagement.Web.Pages.UniappManagement.UniappVersions.UniappVersion.ViewModels
 {
     public class CreateUpdateUniappVersionViewModel
     {
@@ -26,8 +26,7 @@ namespace EasyAbp.UniappManagement.Web.Pages.UniappVersions.UniappVersion.ViewMo
         [Display(Name="UniappVersionPkgUrl")]
         public string PkgUrl { get; set; }
 
-        [DefaultValue(true)]
-        [Display(Name="UniappVersionIsLatest")]
-        public bool IsLatest { get; set; }
+        [Display(Name = "UniappVersionIsLatest")]
+        public bool IsLatest { get; set; } = true;
     }
 }

@@ -2,9 +2,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using EasyAbp.UniappManagement.Uniapps;
 using EasyAbp.UniappManagement.Uniapps.Dtos;
-using EasyAbp.UniappManagement.Web.Pages.Uniapps.Uniapp.ViewModels;
+using EasyAbp.UniappManagement.Web.Pages.UniappManagement.Uniapps.Uniapp.ViewModels;
 
-namespace EasyAbp.UniappManagement.Web.Pages.Uniapps.Uniapp
+namespace EasyAbp.UniappManagement.Web.Pages.UniappManagement.Uniapps.Uniapp
 {
     public class CreateModalModel : UniappManagementPageModel
     {

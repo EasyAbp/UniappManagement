@@ -30,7 +30,7 @@ namespace EasyAbp.UniappManagement.Web
             if (await authorizationService.IsGrantedAsync(UniappManagementPermissions.Uniapps.Default))
             {
                 context.Menu.AddItem(
-                    new ApplicationMenuItem("Uniapp", l["Menu:Uniapp"], "/Uniapps/Uniapp")
+                    new ApplicationMenuItem("Uniapp", l["Menu:Uniapp"], "/UniappManagement/Uniapps/Uniapp")
                 );
             }
         }

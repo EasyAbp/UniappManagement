@@ -1,11 +1,11 @@
 @page
 @inherits EasyAbp.UniappManagement.Web.Pages.UniappManagementPage
 @using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
-@model EasyAbp.UniappManagement.Web.Pages.UniappVersions.UniappVersion.EditModalModel
+@model EasyAbp.UniappManagement.Web.Pages.UniappManagement.UniappVersions.UniappVersion.EditModalModel
 @{
     Layout = null;
 }
-<abp-dynamic-form abp-model="UniappVersion" data-ajaxForm="true" asp-page="/UniappVersions/UniappVersion/EditModal">
+<abp-dynamic-form abp-model="UniappVersion" data-ajaxForm="true" asp-page="/UniappManagement/UniappVersions/UniappVersion/EditModal">
     <abp-modal>
         <abp-modal-header title="@L["EditUniappVersion"].Value"></abp-modal-header>
         <abp-modal-body>

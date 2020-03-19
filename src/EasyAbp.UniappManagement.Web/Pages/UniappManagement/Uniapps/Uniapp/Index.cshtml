@@ -1,19 +1,24 @@
 @page
-@using System.Net
 @using EasyAbp.UniappManagement.Authorization
-@using EasyAbp.UniappManagement.Web.Pages.Uniapps.Uniapp
+@using EasyAbp.UniappManagement.Web.Pages.UniappManagement.Uniapps.Uniapp
 @using Microsoft.AspNetCore.Authorization
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
 @inherits EasyAbp.UniappManagement.Web.Pages.UniappManagementPage
 @inject IAuthorizationService Authorization
 @model IndexModel
-
+@inject IPageLayout PageLayout
 @section scripts
 {
-    <abp-script src="/Pages/Uniapps/Uniapp/index.js" />
+    <abp-script src="/Pages/UniappManagement/Uniapps/Uniapp/index.js" />
 }
 @section styles
 {
-    <abp-style src="/Pages/Uniapps/Uniapp/index.css"/>
+    <abp-style src="/Pages/UniappManagement/Uniapps/Uniapp/index.css"/>
+}
+@{
+    PageLayout.Content.Title = L["Uniapp"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:Uniapp"].Value);
+    PageLayout.Content.MenuItemName = L["Menu:Uniapp"].Value;
 }
 
 <abp-card>

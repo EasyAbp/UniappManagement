@@ -3,8 +3,8 @@ $(function () {
     var l = abp.localization.getResource('UniappManagement');
 
     var service = easyAbp.uniappManagement.uniapps.uniapp;
-    var createModal = new abp.ModalManager(abp.appPath + 'Uniapps/Uniapp/CreateModal');
-    var editModal = new abp.ModalManager(abp.appPath + 'Uniapps/Uniapp/EditModal');
+    var createModal = new abp.ModalManager(abp.appPath + 'UniappManagement/Uniapps/Uniapp/CreateModal');
+    var editModal = new abp.ModalManager(abp.appPath + 'UniappManagement/Uniapps/Uniapp/EditModal');
 
     var dataTable = $('#UniappTable').DataTable(abp.libs.datatables.normalizeConfiguration({
         processing: true,
@@ -24,7 +24,7 @@ $(function () {
                                 text: l('UniappVersion'),
                                 visible: abp.auth.isGranted('UniappManagement.UniappVersion'),
                                 action: function (data) {
-                                    window.location.href = abp.appPath + "UniappVersions/UniappVersion?appId=" + data.record.id
+                                    window.location.href = abp.appPath + "UniappManagement/UniappVersions/UniappVersion?appId=" + data.record.id
                                 }
                             },
                             {

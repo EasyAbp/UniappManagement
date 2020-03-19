@@ -4,7 +4,7 @@ using EasyAbp.UniappManagement.Uniapps;
 using EasyAbp.UniappManagement.Uniapps.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EasyAbp.UniappManagement.Web.Pages.UniappVersions.UniappVersion
+namespace EasyAbp.UniappManagement.Web.Pages.UniappManagement.UniappVersions.UniappVersion
 {
     public class IndexModel : UniappManagementPageModel
     {

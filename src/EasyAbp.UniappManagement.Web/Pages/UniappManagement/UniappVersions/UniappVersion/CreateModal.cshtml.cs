@@ -3,35 +3,35 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using EasyAbp.UniappManagement.UniappVersions;
 using EasyAbp.UniappManagement.UniappVersions.Dtos;
-using EasyAbp.UniappManagement.Web.Pages.UniappVersions.UniappVersion.ViewModels;
+using EasyAbp.UniappManagement.Web.Pages.UniappManagement.UniappVersions.UniappVersion.ViewModels;
 
-namespace EasyAbp.UniappManagement.Web.Pages.UniappVersions.UniappVersion
+namespace EasyAbp.UniappManagement.Web.Pages.UniappManagement.UniappVersions.UniappVersion
 {
-    public class EditModalModel : UniappManagementPageModel
+    public class CreateModalModel : UniappManagementPageModel
     {
-        [HiddenInput]
-        [BindProperty(SupportsGet = true)]
-        public Guid Id { get; set; }
-
         [BindProperty]
         public CreateUpdateUniappVersionViewModel UniappVersion { get; set; }
 
         private readonly IUniappVersionAppService _service;
 
-        public EditModalModel(IUniappVersionAppService service)
+        public CreateModalModel(IUniappVersionAppService service)
         {
             _service = service;
         }
 
-        public async Task OnGetAsync()
+        public Task OnGetAsync(Guid appId)
         {
-            var dto = await _service.GetAsync(Id);
-            UniappVersion = ObjectMapper.Map<UniappVersionDto, CreateUpdateUniappVersionViewModel>(dto);
+            UniappVersion = new CreateUpdateUniappVersionViewModel
+            {
+                AppId = appId
+            };
+
+            return Task.CompletedTask;
         }
 
         public async Task<IActionResult> OnPostAsync()
         {
-            await _service.UpdateAsync(Id,
+            await _service.CreateAsync(
                 ObjectMapper.Map<CreateUpdateUniappVersionViewModel, CreateUpdateUniappVersionDto>(UniappVersion));
             return NoContent();
         }

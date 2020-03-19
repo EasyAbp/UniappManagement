@@ -3,8 +3,8 @@ $(function () {
     var l = abp.localization.getResource('UniappManagement');
 
     var service = easyAbp.uniappManagement.uniappVersions.uniappVersion;
-    var createModal = new abp.ModalManager(abp.appPath + 'UniappVersions/UniappVersion/CreateModal');
-    var editModal = new abp.ModalManager(abp.appPath + 'UniappVersions/UniappVersion/EditModal');
+    var createModal = new abp.ModalManager(abp.appPath + 'UniappManagement/UniappVersions/UniappVersion/CreateModal');
+    var editModal = new abp.ModalManager(abp.appPath + 'UniappManagement/UniappVersions/UniappVersion/EditModal');
 
     var dataTable = $('#UniappVersionTable').DataTable(abp.libs.datatables.normalizeConfiguration({
         processing: true,

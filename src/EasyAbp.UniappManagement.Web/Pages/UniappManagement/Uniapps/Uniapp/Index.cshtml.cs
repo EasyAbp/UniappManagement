@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace EasyAbp.UniappManagement.Web.Pages.Uniapps.Uniapp
+namespace EasyAbp.UniappManagement.Web.Pages.UniappManagement.Uniapps.Uniapp
 {
     public class IndexModel : UniappManagementPageModel
     {

@@ -1,8 +1,8 @@
 using EasyAbp.UniappManagement.Uniapps.Dtos;
 using EasyAbp.UniappManagement.UniappVersions.Dtos;
 using AutoMapper;
-using EasyAbp.UniappManagement.Web.Pages.Uniapps.Uniapp.ViewModels;
-using EasyAbp.UniappManagement.Web.Pages.UniappVersions.UniappVersion.ViewModels;
+using EasyAbp.UniappManagement.Web.Pages.UniappManagement.Uniapps.Uniapp.ViewModels;
+using EasyAbp.UniappManagement.Web.Pages.UniappManagement.UniappVersions.UniappVersion.ViewModels;
 
 namespace EasyAbp.UniappManagement.Web
 {

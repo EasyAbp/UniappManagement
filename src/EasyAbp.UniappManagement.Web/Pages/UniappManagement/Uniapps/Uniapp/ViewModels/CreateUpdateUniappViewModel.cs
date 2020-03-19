@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace EasyAbp.UniappManagement.Web.Pages.Uniapps.Uniapp.ViewModels
+namespace EasyAbp.UniappManagement.Web.Pages.UniappManagement.Uniapps.Uniapp.ViewModels
 {
     public class CreateUpdateUniappViewModel
     {
@@ -17,6 +17,6 @@ namespace EasyAbp.UniappManagement.Web.Pages.Uniapps.Uniapp.ViewModels
         public string IconImageUrl { get; set; }
 
         [Display(Name="UniappIsAvailable")]
-        public bool IsAvailable { get; set; }
+        public bool IsAvailable { get; set; } = true;
     }
 }
