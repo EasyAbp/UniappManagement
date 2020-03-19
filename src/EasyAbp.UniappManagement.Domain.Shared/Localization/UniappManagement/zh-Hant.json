@@ -1,0 +1,25 @@
+{
+  "culture": "zh-Hant",
+  "texts": {
+    "Menu:Uniapp": "uni-app管理",
+    "Uniapp": "uni-app",
+    "UniappName": "應用名稱",
+    "UniappDescription": "應用介紹",
+    "UniappIconImageUrl": "圖標URL",
+    "UniappIsAvailable": "啟用",
+    "CreateUniapp": "新建應用",
+    "EditUniapp": "編輯",
+    "UniappDeletionConfirmationMessage": "確認删除應用{0}？",
+    "SuccessfullyDeleted": "删除成功",
+    "UniappVersion": "uni-app版本管理",
+    "UniappVersionAppId": "應用ID",
+    "UniappVersionBuildNumber": "版本序號",
+    "UniappVersionTag": "版本Tag",
+    "UniappVersionWgtUrl": "WgtUrl",
+    "UniappVersionPkgUrl": "PkgUrl",
+    "UniappVersionIsLatest": "當前最新版本",
+    "CreateUniappVersion": "新建版本",
+    "EditUniappVersion": "編輯",
+    "UniappVersionDeletionConfirmationMessage": "確認删除版本{0}？"
+  }
+}

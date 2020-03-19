@@ -1,0 +1,49 @@
+@page
+@using System.Net
+@using EasyAbp.UniappManagement.Authorization
+@using EasyAbp.UniappManagement.Web.Pages.Uniapps.Uniapp
+@using Microsoft.AspNetCore.Authorization
+@inherits EasyAbp.UniappManagement.Web.Pages.UniappManagementPage
+@inject IAuthorizationService Authorization
+@model IndexModel
+
+@section scripts
+{
+    <abp-script src="/Pages/Uniapps/Uniapp/index.js" />
+}
+@section styles
+{
+    <abp-style src="/Pages/Uniapps/Uniapp/index.css"/>
+}
+
+<abp-card>
+    <abp-card-header>
+        <abp-row>
+            <abp-column size-md="_6">
+                <abp-card-title>@L["Uniapp"]</abp-card-title>
+            </abp-column>
+            <abp-column size-md="_6" class="text-right">
+                @if (await Authorization.IsGrantedAsync(UniappManagementPermissions.Uniapps.Create))
+                {
+                    <abp-button id="NewUniappButton"
+                                text="@L["CreateUniapp"].Value"
+                                icon="plus"
+                                button-type="Primary"/>
+                }
+            </abp-column>
+        </abp-row>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-table striped-rows="true" id="UniappTable">
+            <thead>
+            <tr>
+                <th>@L["Actions"]</th>
+                <th>@L["UniappName"]</th>
+                <th>@L["UniappDescription"]</th>
+                <th>@L["UniappIconImageUrl"]</th>
+                <th>@L["UniappIsAvailable"]</th>
+            </tr>
+            </thead>
+        </abp-table>
+    </abp-card-body>
+</abp-card>

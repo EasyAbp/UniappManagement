@@ -1,5 +1,8 @@
-﻿using Volo.Abp.Data;
+using Microsoft.EntityFrameworkCore;
+using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
+using EasyAbp.UniappManagement.Uniapps;
+using EasyAbp.UniappManagement.UniappVersions;
 
 namespace EasyAbp.UniappManagement.EntityFrameworkCore
 {
@@ -9,5 +12,7 @@ namespace EasyAbp.UniappManagement.EntityFrameworkCore
         /* Add DbSet for each Aggregate Root here. Example:
          * DbSet<Question> Questions { get; }
          */
+        DbSet<Uniapp> Uniapps { get; set; }
+        DbSet<UniappVersion> UniappVersions { get; set; }
     }
 }

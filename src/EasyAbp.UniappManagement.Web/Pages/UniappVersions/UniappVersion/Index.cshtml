@@ -1,0 +1,61 @@
+@page
+@using EasyAbp.UniappManagement.Authorization
+@using EasyAbp.UniappManagement.Web.Pages.UniappVersions.UniappVersion
+@using Microsoft.AspNetCore.Authorization
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@inherits EasyAbp.UniappManagement.Web.Pages.UniappManagementPage
+@inject IPageLayout PageLayout
+@inject IAuthorizationService Authorization
+@model IndexModel
+
+@section scripts
+{
+    <abp-script src="/Pages/UniappVersions/UniappVersion/index.js" />
+}
+@section styles
+{
+    <abp-style src="/Pages/UniappVersions/UniappVersion/index.css"/>
+}
+@{
+    ViewBag.PageTitle = $"{L["UniappVersion"].Value} - {Model.Uniapp.Name}";
+
+    PageLayout.Content.Title = L["UniappVersion"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:Uniapp"].Value);
+    PageLayout.Content.MenuItemName = L["Menu:Uniapp"].Value;
+
+    var cardTitle = $"{L["UniappVersion"].Value} - {Model.Uniapp.Name}";
+}
+<script>
+    let appId = '@Model.AppId';
+</script>
+
+<abp-card>
+    <abp-card-header>
+        <abp-row>
+            <abp-column size-md="_6">
+                <abp-card-title>@cardTitle</abp-card-title>
+            </abp-column>
+            <abp-column size-md="_6" class="text-right">
+                @if (await Authorization.IsGrantedAsync(UniappManagementPermissions.UniappVersions.Create))
+                {
+                    <abp-button id="NewUniappVersionButton"
+                                text="@L["CreateUniappVersion"].Value"
+                                icon="plus"
+                                button-type="Primary"/>
+                }
+            </abp-column>
+        </abp-row>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-table striped-rows="true" id="UniappVersionTable">
+            <thead>
+            <tr>
+                <th>@L["Actions"]</th>
+                <th>@L["UniappVersionBuildNumber"]</th>
+                <th>@L["UniappVersionTag"]</th>
+                <th>@L["UniappVersionIsLatest"]</th>
+            </tr>
+            </thead>
+        </abp-table>
+    </abp-card-body>
+</abp-card>

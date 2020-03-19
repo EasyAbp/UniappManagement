@@ -1,6 +1,9 @@
-﻿using System;
+using EasyAbp.UniappManagement.UniappVersions;
+using EasyAbp.UniappManagement.Uniapps;
+using System;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 
 namespace EasyAbp.UniappManagement.EntityFrameworkCore
 {
@@ -38,6 +41,20 @@ namespace EasyAbp.UniappManagement.EntityFrameworkCore
                 b.HasIndex(q => q.CreationTime);
             });
             */
+
+            builder.Entity<Uniapp>(b =>
+            {
+                b.ToTable(options.TablePrefix + "Uniapps", options.Schema);
+                b.ConfigureByConvention(); 
+                /* Configure more properties here */
+            });
+
+            builder.Entity<UniappVersion>(b =>
+            {
+                b.ToTable(options.TablePrefix + "UniappVersions", options.Schema);
+                b.ConfigureByConvention(); 
+                /* Configure more properties here */
+            });
         }
     }
 }

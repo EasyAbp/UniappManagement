@@ -1,6 +1,25 @@
 {
   "culture": "tr",
   "texts": {
-    "ManageYourProfile":  "Profil yönetimi" 
+    "Menu:Uniapp": "uni-app",
+    "Uniapp": "uni-app",
+    "UniappName": "App Name",
+    "UniappDescription": "Description",
+    "UniappIconImageUrl": "Icon Image URL",
+    "UniappIsAvailable": "Available",
+    "CreateUniapp": "New App",
+    "EditUniapp": "Edit",
+    "UniappDeletionConfirmationMessage": "Are you sure to delete the uni-app {0}?",
+    "SuccessfullyDeleted": "Successfully deleted",
+    "UniappVersion": "uni-app Version",
+    "UniappVersionAppId": "App ID",
+    "UniappVersionBuildNumber": "Build Number",
+    "UniappVersionTag": "Version Tag",
+    "UniappVersionWgtUrl": "WgtUrl",
+    "UniappVersionPkgUrl": "PkgUrl",
+    "UniappVersionIsLatest": "Latest",
+    "CreateUniappVersion": "New Version",
+    "EditUniappVersion": "Edit",
+    "UniappVersionDeletionConfirmationMessage": "Are you sure to delete the version {0}?"
   }
 }

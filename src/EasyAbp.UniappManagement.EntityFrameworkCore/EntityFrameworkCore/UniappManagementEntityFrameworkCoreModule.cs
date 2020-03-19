@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using EasyAbp.UniappManagement.UniappVersions;
+using EasyAbp.UniappManagement.Uniapps;
+using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.Modularity;
 
@@ -17,6 +19,8 @@ namespace EasyAbp.UniappManagement.EntityFrameworkCore
                 /* Add custom repositories here. Example:
                  * options.AddRepository<Question, EfCoreQuestionRepository>();
                  */
+                options.AddRepository<Uniapp, UniappRepository>();
+                options.AddRepository<UniappVersion, UniappVersionRepository>();
             });
         }
     }
