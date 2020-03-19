@@ -47,6 +47,7 @@ namespace EasyAbp.UniappManagement.EntityFrameworkCore
                 b.ToTable(options.TablePrefix + "Uniapps", options.Schema);
                 b.ConfigureByConvention(); 
                 /* Configure more properties here */
+                b.HasIndex(u => u.Name);
             });
 
             builder.Entity<UniappVersion>(b =>
@@ -54,6 +55,7 @@ namespace EasyAbp.UniappManagement.EntityFrameworkCore
                 b.ToTable(options.TablePrefix + "UniappVersions", options.Schema);
                 b.ConfigureByConvention(); 
                 /* Configure more properties here */
+                b.HasIndex(v => v.AppId);
             });
         }
     }
