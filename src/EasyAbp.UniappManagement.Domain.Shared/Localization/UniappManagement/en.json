@@ -17,7 +17,6 @@
     "UniappVersionTag": "Version Tag",
     "UniappVersionWgtUrl": "WgtUrl",
     "UniappVersionPkgUrl": "PkgUrl",
-    "UniappVersionIsLatest": "Latest",
     "CreateUniappVersion": "New Version",
     "EditUniappVersion": "Edit",
     "UniappVersionDeletionConfirmationMessage": "Are you sure to delete the version {0}?"

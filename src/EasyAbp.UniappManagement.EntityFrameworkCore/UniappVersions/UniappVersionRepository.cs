@@ -19,8 +19,8 @@ namespace EasyAbp.UniappManagement.UniappVersions
 
         public async Task<UniappVersion> GetLatestByAppIdAsync(Guid appId, CancellationToken cancellationToken = default)
         {
-            var entity = await GetQueryable().FirstOrDefaultAsync(v => v.AppId == appId && v.IsLatest,
-                cancellationToken: cancellationToken);
+            var entity = await GetQueryable().Where(v => v.AppId == appId).OrderByDescending(v => v.BuildNumber)
+                .FirstOrDefaultAsync(cancellationToken);
 
             if (entity == null)
             {

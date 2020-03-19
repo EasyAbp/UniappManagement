@@ -14,7 +14,5 @@ namespace EasyAbp.UniappManagement.UniappVersions.Dtos
         public string WgtUrl { get; set; }
 
         public string PkgUrl { get; set; }
-
-        public bool IsLatest { get; set; }
     }
 }

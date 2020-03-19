@@ -45,8 +45,7 @@ $(function () {
                 }
             },
             { data: "buildNumber" },
-            { data: "tag" },
-            { data: "isLatest" },
+            { data: "tag" }
         ]
     }));
 

@@ -22,8 +22,5 @@ namespace EasyAbp.UniappManagement.UniappVersions.Dtos
         [Url]
         [DisplayName("UniappVersionPkgUrl")]
         public string PkgUrl { get; set; }
-
-        [DisplayName("UniappVersionIsLatest")]
-        public bool IsLatest { get; set; }
     }
 }

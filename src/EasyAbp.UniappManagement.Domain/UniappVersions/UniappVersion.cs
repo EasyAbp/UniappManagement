@@ -22,8 +22,6 @@ namespace EasyAbp.UniappManagement.UniappVersions
         [CanBeNull]
         public virtual string PkgUrl { get; protected set; }
         
-        public virtual bool IsLatest { get; protected set; }
-        
         protected UniappVersion() { }
 
         public UniappVersion(
@@ -33,8 +31,7 @@ namespace EasyAbp.UniappManagement.UniappVersions
             long buildNumber,
             [NotNull] string tag,
             [CanBeNull] string wgtUrl,
-            [CanBeNull] string pkgUrl,
-            bool isLatest) : base(id)
+            [CanBeNull] string pkgUrl) : base(id)
         {
             TenantId = tenantId;
             AppId = appId;
@@ -42,7 +39,6 @@ namespace EasyAbp.UniappManagement.UniappVersions
             Tag = tag;
             WgtUrl = wgtUrl;
             PkgUrl = pkgUrl;
-            IsLatest = isLatest;
         }
     }
 }
