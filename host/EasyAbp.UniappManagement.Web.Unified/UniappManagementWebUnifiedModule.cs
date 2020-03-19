@@ -5,6 +5,7 @@ using Microsoft.Extensions.Hosting;
 using EasyAbp.UniappManagement.EntityFrameworkCore;
 using EasyAbp.UniappManagement.MultiTenancy;
 using EasyAbp.UniappManagement.Web;
+using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Swagger;
 using Volo.Abp;
@@ -58,7 +59,8 @@ namespace EasyAbp.UniappManagement
         typeof(AbpTenantManagementWebModule),
         typeof(AbpTenantManagementApplicationModule),
         typeof(AbpTenantManagementEntityFrameworkCoreModule),
-        typeof(AbpAspNetCoreMvcUiBasicThemeModule),
+        typeof(AbpAspNetCoreMvcUiStislaThemeModule),
+        // typeof(AbpAspNetCoreMvcUiBasicThemeModule),
         typeof(AbpAspNetCoreSerilogModule)
         )]
     public class UniappManagementWebUnifiedModule : AbpModule
