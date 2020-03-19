@@ -17,7 +17,7 @@ namespace EasyAbp.UniappManagement.UniappVersions
         {
         }
 
-        public async Task<UniappVersion> GetLatestByAppIdAsync(Guid appId, CancellationToken cancellationToken = default)
+        public virtual async Task<UniappVersion> GetLatestByAppIdAsync(Guid appId, CancellationToken cancellationToken = default)
         {
             var entity = await GetQueryable().Where(v => v.AppId == appId).OrderByDescending(v => v.BuildNumber)
                 .FirstOrDefaultAsync(cancellationToken);
@@ -30,7 +30,7 @@ namespace EasyAbp.UniappManagement.UniappVersions
             return entity;
         }
 
-        public async Task<UniappVersion> GetByAppIdAsync(Guid appId, string tag, CancellationToken cancellationToken = default)
+        public virtual async Task<UniappVersion> GetByAppIdAsync(Guid appId, string tag, CancellationToken cancellationToken = default)
         {
             var entity = await GetQueryable()
                 .FirstOrDefaultAsync(v => v.AppId == appId && v.Tag == tag.Trim(),

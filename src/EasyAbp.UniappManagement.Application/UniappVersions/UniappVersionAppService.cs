@@ -34,14 +34,14 @@ namespace EasyAbp.UniappManagement.UniappVersions
             return base.CreateFilteredQuery(input).Where(v => v.AppId == input.AppId);
         }
 
-        public async Task<UniappVersionDto> GetPublicLatestAsync(Guid appId)
+        public virtual async Task<UniappVersionDto> GetPublicLatestAsync(Guid appId)
         {
             var version = await _uniappVersionRepository.GetLatestByAppIdAsync(appId);
 
             return ObjectMapper.Map<UniappVersion, UniappVersionDto>(version);
         }
 
-        public async Task<UniappVersionDto> GetPublicLatestByAppNameAsync(string name)
+        public virtual async Task<UniappVersionDto> GetPublicLatestByAppNameAsync(string name)
         {
             var uniapp = await _uniappRepository.FindByNameAsync(name);
 
@@ -53,14 +53,14 @@ namespace EasyAbp.UniappManagement.UniappVersions
             return await GetPublicLatestAsync(uniapp.Id);
         }
         
-        public async Task<UniappVersionDto> GetPublicAsync(Guid appId, string tag)
+        public virtual async Task<UniappVersionDto> GetPublicAsync(Guid appId, string tag)
         {
             var version = await _uniappVersionRepository.GetByAppIdAsync(appId, tag);
 
             return ObjectMapper.Map<UniappVersion, UniappVersionDto>(version);
         }
 
-        public async Task<UniappVersionDto> GetPublicByAppNameAsync(string name, string tag)
+        public virtual async Task<UniappVersionDto> GetPublicByAppNameAsync(string name, string tag)
         {
             var uniapp = await _uniappRepository.FindByNameAsync(name);
 
