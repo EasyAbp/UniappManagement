@@ -9,23 +9,23 @@
 
 * Install Manually
 
-    1. Install `EasyAbp.Abp.UniappManagement.Application` NuGet package to `MyProject.Application` project and add `[DependsOn(AbpUniappManagementApplicationModule)]` attribute to the module.
+    1. Install `EasyAbp.UniappManagement.Application` NuGet package to `MyProject.Application` project and add `[DependsOn(UniappManagementApplicationModule)]` attribute to the module.
 
-    1. Install `EasyAbp.Abp.UniappManagement.Application.Contracts` NuGet package to `MyProject.Application.Contracts` project and add `[DependsOn(AbpUniappManagementApplicationContractsModule)]` attribute to the module.
+    1. Install `EasyAbp.UniappManagement.Application.Contracts` NuGet package to `MyProject.Application.Contracts` project and add `[DependsOn(UniappManagementApplicationContractsModule)]` attribute to the module.
 
-    1. Install `EasyAbp.Abp.UniappManagement.Domain` NuGet package to `MyProject.Domain` project and add `[DependsOn(AbpUniappManagementDomainModule)]` attribute to the module.
+    1. Install `EasyAbp.UniappManagement.Domain` NuGet package to `MyProject.Domain` project and add `[DependsOn(UniappManagementDomainModule)]` attribute to the module.
 
-    1. Install `EasyAbp.Abp.UniappManagement.Domain.Shared` NuGet package to `MyProject.Domain.Shared` project and add `[DependsOn(AbpUniappManagementDomainSharedModule)]` attribute to the module.
+    1. Install `EasyAbp.UniappManagement.Domain.Shared` NuGet package to `MyProject.Domain.Shared` project and add `[DependsOn(UniappManagementDomainSharedModule)]` attribute to the module.
 
-    1. Install `EasyAbp.Abp.UniappManagement.EntityFrameworkCore` NuGet package to `MyProject.EntityFrameworkCore` project and add `[DependsOn(AbpUniappManagementEntityFrameworkCoreModule)]` attribute to the module.
+    1. Install `EasyAbp.UniappManagement.EntityFrameworkCore` NuGet package to `MyProject.EntityFrameworkCore` project and add `[DependsOn(UniappManagementEntityFrameworkCoreModule)]` attribute to the module.
 
-    1. Install `EasyAbp.Abp.UniappManagement.HttpApi` NuGet package to `MyProject.HttpApi` project and add `[DependsOn(AbpUniappManagementHttpApiModule)]` attribute to the module.
+    1. Install `EasyAbp.UniappManagement.HttpApi` NuGet package to `MyProject.HttpApi` project and add `[DependsOn(UniappManagementHttpApiModule)]` attribute to the module.
 
-    1. Install `EasyAbp.Abp.UniappManagement.HttpApi.Client` NuGet package to `MyProject.HttpApi.Client` project and add `[DependsOn(AbpUniappManagementHttpApiClientModule)]` attribute to the module.
+    1. Install `EasyAbp.UniappManagement.HttpApi.Client` NuGet package to `MyProject.HttpApi.Client` project and add `[DependsOn(UniappManagementHttpApiClientModule)]` attribute to the module.
 
-    1. Install `EasyAbp.Abp.UniappManagement.MongoDB` NuGet package to `MyProject.MongoDB` project and add `[DependsOn(AbpUniappManagementMongoDbModule)]` attribute to the module.
+    1. Install `EasyAbp.UniappManagement.MongoDB` NuGet package to `MyProject.MongoDB` project and add `[DependsOn(UniappManagementMongoDbModule)]` attribute to the module.
 
-    1. (Optional) If you need MVC UI, install `EasyAbp.Abp.UniappManagement.Web` NuGet package to `MyProject.Web` project and add `[DependsOn(AbpUniappManagementWebModule)]` attribute to the module.
+    1. (Optional) If you need MVC UI, install `EasyAbp.UniappManagement.Web` NuGet package to `MyProject.Web` project and add `[DependsOn(UniappManagementWebModule)]` attribute to the module.
     
     1. Add `options.ConventionalControllers.Create(typeof(UniappManagementApplicationModule).Assembly);` to `Configure<AbpAspNetCoreMvcOptions>(options => { ... });` in your host module (It is usually Web project or HttpApi.Host project).
 
