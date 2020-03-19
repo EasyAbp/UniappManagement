@@ -36,31 +36,48 @@ namespace EasyAbp.UniappManagement.UniappVersions
 
         public virtual async Task<UniappVersionDto> GetPublicLatestAsync(Guid appId)
         {
-            var version = await _uniappVersionRepository.GetLatestByAppIdAsync(appId);
+            var uniapp = await GetAvailableUniappByIdAsync(appId);
+
+            var version = await _uniappVersionRepository.GetLatestByAppIdAsync(uniapp.Id);
 
             return ObjectMapper.Map<UniappVersion, UniappVersionDto>(version);
         }
 
         public virtual async Task<UniappVersionDto> GetPublicLatestByAppNameAsync(string name)
         {
-            var uniapp = await _uniappRepository.FindByNameAsync(name);
-
-            if (uniapp == null)
-            {
-                throw new UniappNotFoundException(name);
-            }
+            var uniapp = await GetAvailableUniappByNameAsync(name);
 
             return await GetPublicLatestAsync(uniapp.Id);
         }
         
         public virtual async Task<UniappVersionDto> GetPublicAsync(Guid appId, string tag)
         {
-            var version = await _uniappVersionRepository.GetByAppIdAsync(appId, tag);
+            var uniapp = await GetAvailableUniappByIdAsync(appId);
+
+            var version = await _uniappVersionRepository.GetByAppIdAsync(uniapp.Id, tag);
 
             return ObjectMapper.Map<UniappVersion, UniappVersionDto>(version);
         }
 
         public virtual async Task<UniappVersionDto> GetPublicByAppNameAsync(string name, string tag)
+        {
+            var uniapp = await GetAvailableUniappByNameAsync(name);
+
+            var version = await _uniappVersionRepository.GetByAppIdAsync(uniapp.Id, tag);
+
+            return ObjectMapper.Map<UniappVersion, UniappVersionDto>(version);
+        }
+
+        private async Task<Uniapp> GetAvailableUniappByIdAsync(Guid id)
+        {
+            var uniapp = await _uniappRepository.GetAsync(id);
+
+            CheckUniappAvailable(uniapp);
+
+            return uniapp;
+        }
+
+        private async Task<Uniapp> GetAvailableUniappByNameAsync(string name)
         {
             var uniapp = await _uniappRepository.FindByNameAsync(name);
 
@@ -68,8 +85,18 @@ namespace EasyAbp.UniappManagement.UniappVersions
             {
                 throw new UniappNotFoundException(name);
             }
+            
+            CheckUniappAvailable(uniapp);
 
-            return await GetPublicAsync(uniapp.Id, tag);
+            return uniapp;
+        }
+
+        protected virtual void CheckUniappAvailable(Uniapp uniapp)
+        {
+            if (!uniapp.IsAvailable)
+            {
+                throw new UniappUnavailableException(uniapp);
+            }
         }
     }
 }
