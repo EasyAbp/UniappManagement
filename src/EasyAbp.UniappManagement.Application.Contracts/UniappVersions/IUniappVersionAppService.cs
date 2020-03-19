@@ -14,11 +14,11 @@ namespace EasyAbp.UniappManagement.UniappVersions
             CreateUpdateUniappVersionDto,
             CreateUpdateUniappVersionDto>
     {
-        Task<UniappVersionDto> GetPublicLatestAsync(Guid id);
+        Task<UniappVersionDto> GetPublicLatestAsync(Guid appId);
         
         Task<UniappVersionDto> GetPublicLatestByAppNameAsync(string name);
         
-        Task<UniappVersionDto> GetPublicAsync(Guid id, string tag);
+        Task<UniappVersionDto> GetPublicAsync(Guid appId, string tag);
         
         Task<UniappVersionDto> GetPublicByAppNameAsync(string name, string tag);
     }
