@@ -3,9 +3,9 @@ using JetBrains.Annotations;
 using Volo.Abp.Domain.Entities.Auditing;
 using Volo.Abp.MultiTenancy;
 
-namespace EasyAbp.UniappManagement.Apps
+namespace EasyAbp.UniappManagement.Uniapps
 {
-    public class App : FullAuditedAggregateRoot<Guid>, IMultiTenant
+    public class Uniapp : FullAuditedAggregateRoot<Guid>, IMultiTenant
     {
         public virtual Guid? TenantId { get; protected set; }
         
@@ -20,9 +20,9 @@ namespace EasyAbp.UniappManagement.Apps
         
         public virtual bool IsAvailable { get; protected set; }
         
-        protected App() { }
+        protected Uniapp() { }
 
-        public App(
+        public Uniapp(
             Guid id,
             Guid? tenantId,
             [NotNull] string name,

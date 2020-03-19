@@ -3,9 +3,9 @@ using JetBrains.Annotations;
 using Volo.Abp.Domain.Entities.Auditing;
 using Volo.Abp.MultiTenancy;
 
-namespace EasyAbp.UniappManagement.AppVersions
+namespace EasyAbp.UniappManagement.UniappVersions
 {
-    public class AppVersion : FullAuditedAggregateRoot<Guid>, IMultiTenant
+    public class UniappVersion : FullAuditedAggregateRoot<Guid>, IMultiTenant
     {
         public virtual Guid? TenantId { get; protected set; }
         
@@ -24,9 +24,9 @@ namespace EasyAbp.UniappManagement.AppVersions
         
         public virtual bool IsLatest { get; protected set; }
         
-        protected AppVersion() { }
+        protected UniappVersion() { }
 
-        public AppVersion(
+        public UniappVersion(
             Guid id,
             Guid? tenantId,
             Guid appId,
