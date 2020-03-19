@@ -23,13 +23,14 @@ namespace EasyAbp.UniappManagement.Web
 
         private async Task ConfigureMainMenu(MenuConfigurationContext context)
         {
+            var administrationMenuItem = context.Menu.GetAdministration();
             var l = context.ServiceProvider.GetRequiredService<IStringLocalizer<UniappManagementResource>>();            //Add main menu items.
 
             var authorizationService = context.ServiceProvider.GetRequiredService<IAuthorizationService>();
 
             if (await authorizationService.IsGrantedAsync(UniappManagementPermissions.Uniapps.Default))
             {
-                context.Menu.AddItem(
+                administrationMenuItem.AddItem(
                     new ApplicationMenuItem("Uniapp", l["Menu:Uniapp"], "/UniappManagement/Uniapps/Uniapp")
                 );
             }
