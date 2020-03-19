@@ -25,7 +25,7 @@
 
     1. Install `EasyAbp.Abp.UniappManagement.MongoDB` NuGet package to `MyProject.MongoDB` project and add `[DependsOn(AbpUniappManagementMongoDbModule)]` attribute to the module.
 
-    1. (Optional) If you need MVC UI, install `EasyAbp.Abp.UniappManagement.Web` NuGet package to `MyProject.Web` project and add `[DependsOn(AbpUniappManagementHttpApiModule)]` attribute to the module.
+    1. (Optional) If you need MVC UI, install `EasyAbp.Abp.UniappManagement.Web` NuGet package to `MyProject.Web` project and add `[DependsOn(AbpUniappManagementWebModule)]` attribute to the module.
     
     1. Add `options.ConventionalControllers.Create(typeof(UniappManagementApplicationModule).Assembly);` to `Configure<AbpAspNetCoreMvcOptions>(options => { ... });` in your host module (It is usually Web project or HttpApi.Host project).
 
