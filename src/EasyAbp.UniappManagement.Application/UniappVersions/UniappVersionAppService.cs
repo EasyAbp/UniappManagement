@@ -13,7 +13,7 @@ namespace EasyAbp.UniappManagement.UniappVersions
         IUniappVersionAppService
     {
         protected override string CreatePolicyName { get; set; } = UniappManagementPermissions.UniappVersions.Create;
-        protected override string DeletePolicyName { get; set; } = UniappManagementPermissions.UniappVersions.Default;
+        protected override string DeletePolicyName { get; set; } = UniappManagementPermissions.UniappVersions.Delete;
         protected override string UpdatePolicyName { get; set; } = UniappManagementPermissions.UniappVersions.Update;
         protected override string GetPolicyName { get; set; } = UniappManagementPermissions.UniappVersions.Default;
         protected override string GetListPolicyName { get; set; } = UniappManagementPermissions.UniappVersions.Default;

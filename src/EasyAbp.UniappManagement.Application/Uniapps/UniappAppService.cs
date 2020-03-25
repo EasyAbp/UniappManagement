@@ -10,7 +10,7 @@ namespace EasyAbp.UniappManagement.Uniapps
         IUniappAppService
     {
         protected override string CreatePolicyName { get; set; } = UniappManagementPermissions.Uniapps.Create;
-        protected override string DeletePolicyName { get; set; } = UniappManagementPermissions.Uniapps.Default;
+        protected override string DeletePolicyName { get; set; } = UniappManagementPermissions.Uniapps.Delete;
         protected override string UpdatePolicyName { get; set; } = UniappManagementPermissions.Uniapps.Update;
         protected override string GetPolicyName { get; set; } = UniappManagementPermissions.Uniapps.Default;
         protected override string GetListPolicyName { get; set; } = UniappManagementPermissions.Uniapps.Default;
