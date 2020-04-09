@@ -1,24 +1,25 @@
 {
   "culture": "zh-Hant",
   "texts": {
-    "Menu:Uniapp": "uni-app管理",
-    "Uniapp": "uni-app",
+    "Menu:UniappManagement": "Uni-app 管理",
+    "Menu:Uniapps": "Uni-app",
+    "Uniapp": "Uni-app",
     "UniappName": "應用名稱",
     "UniappDescription": "應用介紹",
-    "UniappIconImageUrl": "圖標URL",
+    "UniappIconImageUrl": "圖標 URL",
     "UniappIsAvailable": "啟用",
     "CreateUniapp": "新建應用",
     "EditUniapp": "編輯",
-    "UniappDeletionConfirmationMessage": "確認删除應用{0}？",
+    "UniappDeletionConfirmationMessage": "確認删除應用 {0}?",
     "SuccessfullyDeleted": "删除成功",
-    "UniappVersion": "uni-app版本管理",
-    "UniappVersionAppId": "應用ID",
+    "UniappVersion": "Uni-app 版本管理",
+    "UniappVersionAppId": "應用 ID",
     "UniappVersionBuildNumber": "版本序號",
-    "UniappVersionTag": "版本Tag",
+    "UniappVersionTag": "版本 Tag",
     "UniappVersionWgtUrl": "WgtUrl",
     "UniappVersionPkgUrl": "PkgUrl",
     "CreateUniappVersion": "新建版本",
     "EditUniappVersion": "編輯",
-    "UniappVersionDeletionConfirmationMessage": "確認删除版本{0}？"
+    "UniappVersionDeletionConfirmationMessage": "確認删除版本 {0}?"
   }
 }

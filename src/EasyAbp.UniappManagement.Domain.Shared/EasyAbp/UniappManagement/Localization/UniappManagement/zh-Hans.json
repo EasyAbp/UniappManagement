@@ -1,8 +1,9 @@
 {
   "culture": "zh-Hans",
   "texts": {
-    "Menu:Uniapp": "uni-app 管理",
-    "Uniapp": "uni-app",
+    "Menu:UniappManagement": "Uni-app 管理",
+    "Menu:Uniapps": "Uni-app",
+    "Uniapp": "Uni-app",
     "UniappName": "应用名称",
     "UniappDescription": "应用介绍",
     "UniappIconImageUrl": "图标 URL",
@@ -11,7 +12,7 @@
     "EditUniapp": "编辑",
     "UniappDeletionConfirmationMessage": "确认删除应用 {0}?",
     "SuccessfullyDeleted": "删除成功",
-    "UniappVersion": "uni-app 版本管理",
+    "UniappVersion": "Uni-app 版本管理",
     "UniappVersionAppId": "应用 ID",
     "UniappVersionBuildNumber": "版本序号",
     "UniappVersionTag": "版本 Tag",

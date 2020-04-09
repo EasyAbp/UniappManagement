@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using EasyAbp.UniappManagement.Authorization;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,16 +24,22 @@ namespace EasyAbp.UniappManagement.Web
 
         private async Task ConfigureMainMenu(MenuConfigurationContext context)
         {
-            var administrationMenuItem = context.Menu.GetAdministration();
             var l = context.ServiceProvider.GetRequiredService<IStringLocalizer<UniappManagementResource>>();            //Add main menu items.
 
             var authorizationService = context.ServiceProvider.GetRequiredService<IAuthorizationService>();
 
+            var uniappManagementMenuItem = new ApplicationMenuItem("UniappManagement", l["Menu:UniappManagement"]);
+            
             if (await authorizationService.IsGrantedAsync(UniappManagementPermissions.Uniapps.Default))
             {
-                administrationMenuItem.AddItem(
-                    new ApplicationMenuItem("Uniapp", l["Menu:Uniapp"], "/UniappManagement/Uniapps/Uniapp")
+                uniappManagementMenuItem.AddItem(
+                    new ApplicationMenuItem("Uniapp", l["Menu:Uniapps"], "/UniappManagement/Uniapps/Uniapp")
                 );
+            }
+
+            if (!uniappManagementMenuItem.Items.IsNullOrEmpty())
+            {
+                context.Menu.AddItem(uniappManagementMenuItem);
             }
         }
     }

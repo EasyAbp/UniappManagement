@@ -1,8 +1,9 @@
 {
   "culture": "vi",
   "texts": {
-    "Menu:Uniapp": "uni-app",
-    "Uniapp": "uni-app",
+    "Menu:UniappManagement": "Uni-app Management",
+    "Menu:Uniapps": "Uni-app",
+    "Uniapp": "Uni-app",
     "UniappName": "App Name",
     "UniappDescription": "Description",
     "UniappIconImageUrl": "Icon Image URL",
@@ -11,7 +12,7 @@
     "EditUniapp": "Edit",
     "UniappDeletionConfirmationMessage": "Are you sure to delete the uni-app {0}?",
     "SuccessfullyDeleted": "Successfully deleted",
-    "UniappVersion": "uni-app Version",
+    "UniappVersion": "Uni-app Version",
     "UniappVersionAppId": "App ID",
     "UniappVersionBuildNumber": "Build Number",
     "UniappVersionTag": "Version Tag",
