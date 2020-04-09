@@ -1,15 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="..\..\common.props" />
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>EasyAbp.UniappManagement</RootNamespace>
+    <RootNamespace />
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Volo.Abp.EntityFrameworkCore" Version="2.3.0" />
     <ProjectReference Include="..\EasyAbp.UniappManagement.Domain\EasyAbp.UniappManagement.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="EasyAbp\UniappManagement" />
   </ItemGroup>
 
 </Project>

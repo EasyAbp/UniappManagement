@@ -17,7 +17,7 @@ namespace EasyAbp.UniappManagement
         {
             Configure<AbpVirtualFileSystemOptions>(options =>
             {
-                options.FileSets.AddEmbedded<UniappManagementDomainSharedModule>("EasyAbp.UniappManagement");
+                options.FileSets.AddEmbedded<UniappManagementDomainSharedModule>();
             });
 
             Configure<AbpLocalizationOptions>(options =>
@@ -25,12 +25,12 @@ namespace EasyAbp.UniappManagement
                 options.Resources
                     .Add<UniappManagementResource>("en")
                     .AddBaseTypes(typeof(AbpValidationResource))
-                    .AddVirtualJson("/Localization/UniappManagement");
+                    .AddVirtualJson("/EasyAbp/UniappManagement/Localization/UniappManagement");
             });
 
             Configure<AbpExceptionLocalizationOptions>(options =>
             {
-                options.MapCodeNamespace("UniappManagement", typeof(UniappManagementResource));
+                options.MapCodeNamespace("EasyAbp.UniappManagement", typeof(UniappManagementResource));
             });
         }
     }

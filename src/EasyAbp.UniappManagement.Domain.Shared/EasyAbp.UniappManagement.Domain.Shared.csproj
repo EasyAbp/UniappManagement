@@ -4,7 +4,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>EasyAbp.UniappManagement</RootNamespace>
+    <RootNamespace />
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Localization\UniappManagement\*.json" />
-    <Content Remove="Localization\UniappManagement\*.json" />
+    <EmbeddedResource Include="EasyAbp\UniappManagement\Localization\UniappManagement\*.json" />
+    <Content Remove="EasyAbp\UniappManagement\Localization\UniappManagement\*.json" />
   </ItemGroup>
 
 </Project>
