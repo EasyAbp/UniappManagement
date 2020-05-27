@@ -6,9 +6,13 @@ using Volo.Abp.Security.Claims;
 namespace EasyAbp.UniappManagement.Security
 {
     [Dependency(ReplaceServices = true)]
-    public class FakeCurrentPrincipalAccessor : ICurrentPrincipalAccessor, ISingletonDependency
+    public class FakeCurrentPrincipalAccessor : ThreadCurrentPrincipalAccessor
     {
-        public ClaimsPrincipal Principal => GetPrincipal();
+        public override ClaimsPrincipal GetClaimsPrincipal()
+        {
+            return GetPrincipal();
+        }
+
         private ClaimsPrincipal _principal;
 
         private ClaimsPrincipal GetPrincipal()
@@ -36,4 +40,5 @@ namespace EasyAbp.UniappManagement.Security
             return _principal;
         }
     }
+
 }
