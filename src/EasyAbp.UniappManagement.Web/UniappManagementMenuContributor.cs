@@ -26,11 +26,9 @@ namespace EasyAbp.UniappManagement.Web
         {
             var l = context.GetLocalizer<UniappManagementResource>();            //Add main menu items.
 
-            var authorizationService = context.ServiceProvider.GetRequiredService<IAuthorizationService>();
-
             var uniappManagementMenuItem = new ApplicationMenuItem("UniappManagement", l["Menu:UniappManagement"]);
             
-            if (await authorizationService.IsGrantedAsync(UniappManagementPermissions.Uniapps.Default))
+            if (await context.IsGrantedAsync(UniappManagementPermissions.Uniapps.Default))
             {
                 uniappManagementMenuItem.AddItem(
                     new ApplicationMenuItem("Uniapp", l["Menu:Uniapps"], "/UniappManagement/Uniapps/Uniapp")
