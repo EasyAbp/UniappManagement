@@ -32,7 +32,7 @@ namespace EasyAbp.UniappManagement
         private void AddLogoutItemToMenu(MenuConfigurationContext context)
         {
             var currentUser = context.ServiceProvider.GetRequiredService<ICurrentUser>();
-            var l = context.ServiceProvider.GetRequiredService<IStringLocalizer<UniappManagementResource>>();
+            var l = context.GetLocalizer<UniappManagementResource>();
 
             if (currentUser.IsAuthenticated)
             {

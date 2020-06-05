@@ -24,7 +24,7 @@ namespace EasyAbp.UniappManagement.Web
 
         private async Task ConfigureMainMenu(MenuConfigurationContext context)
         {
-            var l = context.ServiceProvider.GetRequiredService<IStringLocalizer<UniappManagementResource>>();            //Add main menu items.
+            var l = context.GetLocalizer<UniappManagementResource>();            //Add main menu items.
 
             var authorizationService = context.ServiceProvider.GetRequiredService<IAuthorizationService>();
 
