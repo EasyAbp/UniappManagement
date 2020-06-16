@@ -2,7 +2,7 @@
   "culture": "zh-Hans",
   "texts": {
     "Menu:UniappManagement": "Uni-app 管理",
-    "Menu:Uniapps": "Uni-app",
+    "Menu:Uniapp": "Uni-app",
     "Uniapp": "Uni-app",
     "UniappName": "应用名称",
     "UniappDescription": "应用介绍",

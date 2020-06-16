@@ -26,12 +26,12 @@ namespace EasyAbp.UniappManagement.Web
         {
             var l = context.GetLocalizer<UniappManagementResource>();            //Add main menu items.
 
-            var uniappManagementMenuItem = new ApplicationMenuItem("UniappManagement", l["Menu:UniappManagement"]);
+            var uniappManagementMenuItem = new ApplicationMenuItem("EasyAbpUniappManagement", l["Menu:UniappManagement"]);
             
             if (await context.IsGrantedAsync(UniappManagementPermissions.Uniapps.Default))
             {
                 uniappManagementMenuItem.AddItem(
-                    new ApplicationMenuItem("Uniapp", l["Menu:Uniapps"], "/UniappManagement/Uniapps/Uniapp")
+                    new ApplicationMenuItem("EasyAbpUniappManagementUniapp", l["Menu:Uniapp"], "/UniappManagement/Uniapps/Uniapp")
                 );
             }
 
