@@ -180,10 +180,6 @@ namespace EasyAbp.UniappManagement
         {
             Configure<AbpAspNetCoreMvcOptions>(options =>
             {
-                options.ConventionalControllers.Create(typeof(UniappManagementApplicationModule).Assembly, setting =>
-                {
-                    setting.RootPath = "uniapp";
-                });
             });
         }
     }

@@ -2,7 +2,7 @@
 
 namespace EasyAbp.UniappManagement.Localization
 {
-    [LocalizationResourceName("UniappManagement")]
+    [LocalizationResourceName("EasyAbpUniappManagement")]
     public class UniappManagementResource
     {
         

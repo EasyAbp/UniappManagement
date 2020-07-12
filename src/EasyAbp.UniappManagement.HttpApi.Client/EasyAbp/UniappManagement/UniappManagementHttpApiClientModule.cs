@@ -9,7 +9,7 @@ namespace EasyAbp.UniappManagement
         typeof(AbpHttpClientModule))]
     public class UniappManagementHttpApiClientModule : AbpModule
     {
-        public const string RemoteServiceName = "UniappManagement";
+        public const string RemoteServiceName = "EasyAbpUniappManagement";
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {

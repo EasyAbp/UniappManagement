@@ -31,8 +31,6 @@
 
     1. (Optional) If you need MVC UI, install `EasyAbp.UniappManagement.Web` NuGet package to `MyProject.Web` project and add `[DependsOn(UniappManagementWebModule)]` attribute to the module.
     
-    1. Add `options.ConventionalControllers.Create(typeof(UniappManagementApplicationModule).Assembly);` to `Configure<AbpAspNetCoreMvcOptions>(options => { ... });` in your host module (It is usually Web project or HttpApi.Host project).
-
     1. Add `builder.ConfigureUniappManagement();` to OnModelCreating method in `MyProjectMigrationsDbContext.cs`.
 
     1. Add EF Core migrations and update your database. See: [ABP document](https://docs.abp.io/en/abp/latest/Tutorials/Part-1?UI=MVC#add-new-migration-update-the-database).

@@ -1,16 +1,10 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using EasyAbp.UniappManagement.Authorization;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Localization;
 using EasyAbp.UniappManagement.Localization;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Localization;
-using EasyAbp.UniappManagement.Localization;
-using Microsoft.AspNetCore.Authorization;
 using Volo.Abp.UI.Navigation;
 
-namespace EasyAbp.UniappManagement.Web
+namespace EasyAbp.UniappManagement.Web.Menus
 {
     public class UniappManagementMenuContributor : IMenuContributor
     {
@@ -26,12 +20,12 @@ namespace EasyAbp.UniappManagement.Web
         {
             var l = context.GetLocalizer<UniappManagementResource>();            //Add main menu items.
 
-            var uniappManagementMenuItem = new ApplicationMenuItem("EasyAbpUniappManagement", l["Menu:UniappManagement"]);
+            var uniappManagementMenuItem = new ApplicationMenuItem(UniappManagementMenus.Prefix, l["Menu:UniappManagement"]);
             
             if (await context.IsGrantedAsync(UniappManagementPermissions.Uniapps.Default))
             {
                 uniappManagementMenuItem.AddItem(
-                    new ApplicationMenuItem("EasyAbpUniappManagementUniapp", l["Menu:Uniapp"], "/UniappManagement/Uniapps/Uniapp")
+                    new ApplicationMenuItem(UniappManagementMenus.Uniapp, l["Menu:Uniapp"], "/UniappManagement/Uniapps/Uniapp")
                 );
             }
 

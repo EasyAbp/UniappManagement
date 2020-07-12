@@ -22,7 +22,7 @@ $(function () {
                         [
                             {
                                 text: l('UniappVersion'),
-                                visible: abp.auth.isGranted('UniappManagement.UniappVersion'),
+                                visible: abp.auth.isGranted('EasyAbp.UniappManagement.UniappVersion'),
                                 action: function (data) {
                                     window.location.href = abp.appPath + "UniappManagement/UniappVersions/UniappVersion?appId=" + data.record.id
                                 }

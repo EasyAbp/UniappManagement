@@ -1,10 +1,12 @@
 @page
 @using EasyAbp.UniappManagement.Authorization
+@using EasyAbp.UniappManagement.Localization
 @using EasyAbp.UniappManagement.Web.Pages.UniappManagement.UniappVersions.UniappVersion
 @using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Mvc.Localization
 @using Volo.Abp.AspNetCore.Mvc.UI.Layout
-@inherits EasyAbp.UniappManagement.Web.Pages.UniappManagementPage
 @inject IPageLayout PageLayout
+@inject IHtmlLocalizer<UniappManagementResource> L
 @inject IAuthorizationService Authorization
 @model IndexModel
 

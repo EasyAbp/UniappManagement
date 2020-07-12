@@ -4,7 +4,7 @@ namespace EasyAbp.UniappManagement.Authorization
 {
     public class UniappManagementPermissions
     {
-        public const string GroupName = "UniappManagement";
+        public const string GroupName = "EasyAbp.UniappManagement";
 
         public class Uniapps
         {

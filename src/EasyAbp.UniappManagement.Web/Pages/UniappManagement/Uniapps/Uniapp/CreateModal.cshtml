@@ -1,7 +1,9 @@
 @page
-@inherits EasyAbp.UniappManagement.Web.Pages.UniappManagementPage
+@using EasyAbp.UniappManagement.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
 @using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
 @model EasyAbp.UniappManagement.Web.Pages.UniappManagement.Uniapps.Uniapp.CreateModalModel
+@inject IHtmlLocalizer<UniappManagementResource> L
 @{
     Layout = null;
 }
