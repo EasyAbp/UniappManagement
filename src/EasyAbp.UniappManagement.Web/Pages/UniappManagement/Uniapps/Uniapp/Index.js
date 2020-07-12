@@ -29,12 +29,14 @@ $(function () {
                             },
                             {
                                 text: l('Edit'),
+                                visible: abp.auth.isGranted('EasyAbp.UniappManagement.Uniapp.Update'),
                                 action: function (data) {
                                     editModal.open({ id: data.record.id });
                                 }
                             },
                             {
                                 text: l('Delete'),
+                                visible: abp.auth.isGranted('EasyAbp.UniappManagement.Uniapp.Delete'),
                                 confirmMessage: function (data) {
                                     return l('UniappDeletionConfirmationMessage', data.record.id);
                                 },
