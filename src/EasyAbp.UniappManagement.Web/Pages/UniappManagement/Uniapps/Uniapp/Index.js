@@ -1,6 +1,6 @@
 $(function () {
 
-    var l = abp.localization.getResource('UniappManagement');
+    var l = abp.localization.getResource('EasyAbpUniappManagement');
 
     var service = easyAbp.uniappManagement.uniapps.uniapp;
     var createModal = new abp.ModalManager(abp.appPath + 'UniappManagement/Uniapps/Uniapp/CreateModal');
