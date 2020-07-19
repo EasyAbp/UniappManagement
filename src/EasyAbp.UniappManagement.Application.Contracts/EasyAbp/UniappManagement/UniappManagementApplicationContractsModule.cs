@@ -12,12 +12,6 @@ namespace EasyAbp.UniappManagement
         )]
     public class UniappManagementApplicationContractsModule : AbpModule
     {
-        public override void ConfigureServices(ServiceConfigurationContext context)
-        {
-            Configure<AbpVirtualFileSystemOptions>(options =>
-            {
-                options.FileSets.AddEmbedded<UniappManagementApplicationContractsModule>("EasyAbp.UniappManagement");
-            });
-        }
+
     }
 }

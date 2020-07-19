@@ -40,7 +40,7 @@ namespace EasyAbp.UniappManagement.Web
 
             Configure<AbpVirtualFileSystemOptions>(options =>
             {
-                options.FileSets.AddEmbedded<UniappManagementWebModule>("EasyAbp.UniappManagement.Web");
+                options.FileSets.AddEmbedded<UniappManagementWebModule>();
             });
 
             context.Services.AddAutoMapperObjectMapper<UniappManagementWebModule>();
