@@ -9,7 +9,7 @@ using Volo.Abp.EntityFrameworkCore;
 
 namespace EasyAbp.UniappManagement.Uniapps
 {
-    public class UniappRepository : EfCoreRepository<UniappManagementDbContext, Uniapp, Guid>, IUniappRepository
+    public class UniappRepository : EfCoreRepository<IUniappManagementDbContext, Uniapp, Guid>, IUniappRepository
     {
         public UniappRepository(IDbContextProvider<UniappManagementDbContext> dbContextProvider) : base(dbContextProvider)
         {

@@ -11,7 +11,7 @@ using Volo.Abp.EntityFrameworkCore;
 
 namespace EasyAbp.UniappManagement.UniappVersions
 {
-    public class UniappVersionRepository : EfCoreRepository<UniappManagementDbContext, UniappVersion, Guid>, IUniappVersionRepository
+    public class UniappVersionRepository : EfCoreRepository<IUniappManagementDbContext, UniappVersion, Guid>, IUniappVersionRepository
     {
         public UniappVersionRepository(IDbContextProvider<UniappManagementDbContext> dbContextProvider) : base(dbContextProvider)
         {
