@@ -13,7 +13,7 @@ namespace EasyAbp.UniappManagement.UniappVersions
 {
     public class UniappVersionRepository : EfCoreRepository<IUniappManagementDbContext, UniappVersion, Guid>, IUniappVersionRepository
     {
-        public UniappVersionRepository(IDbContextProvider<UniappManagementDbContext> dbContextProvider) : base(dbContextProvider)
+        public UniappVersionRepository(IDbContextProvider<IUniappManagementDbContext> dbContextProvider) : base(dbContextProvider)
         {
         }
 

@@ -11,7 +11,7 @@ namespace EasyAbp.UniappManagement.Uniapps
 {
     public class UniappRepository : EfCoreRepository<IUniappManagementDbContext, Uniapp, Guid>, IUniappRepository
     {
-        public UniappRepository(IDbContextProvider<UniappManagementDbContext> dbContextProvider) : base(dbContextProvider)
+        public UniappRepository(IDbContextProvider<IUniappManagementDbContext> dbContextProvider) : base(dbContextProvider)
         {
         }
 
