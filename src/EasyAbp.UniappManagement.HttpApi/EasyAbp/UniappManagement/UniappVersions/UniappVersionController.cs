@@ -8,7 +8,7 @@ using Volo.Abp.Application.Dtos;
 namespace EasyAbp.UniappManagement.UniappVersions
 {
     [RemoteService(Name = "EasyAbpUniappManagement")]
-    [Route("/api/uniappManagement/uniappVersion")]
+    [Route("/api/uniapp-management/uniapp-version")]
     public class UniappVersionController : UniappManagementController, IUniappVersionAppService
     {
         private readonly IUniappVersionAppService _service;
@@ -52,14 +52,14 @@ namespace EasyAbp.UniappManagement.UniappVersions
         }
 
         [HttpGet]
-        [Route("publicLatest/{appId}")]
+        [Route("public-latest/{appId}")]
         public Task<UniappVersionDto> GetPublicLatestAsync(Guid appId)
         {
             return _service.GetPublicLatestAsync(appId);
         }
 
         [HttpGet]
-        [Route("publicLatestByAppName")]
+        [Route("public-latest/by-app-name/{name}")]
         public Task<UniappVersionDto> GetPublicLatestByAppNameAsync(string name)
         {
             return _service.GetPublicLatestByAppNameAsync(name);
@@ -73,7 +73,7 @@ namespace EasyAbp.UniappManagement.UniappVersions
         }
 
         [HttpGet]
-        [Route("publicByAppName")]
+        [Route("public/by-app-name/{name}/{tag}")]
         public Task<UniappVersionDto> GetPublicByAppNameAsync(string name, string tag)
         {
             return _service.GetPublicByAppNameAsync(name, tag);

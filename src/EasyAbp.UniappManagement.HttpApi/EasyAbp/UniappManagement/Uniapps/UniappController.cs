@@ -8,7 +8,7 @@ using Volo.Abp.Application.Dtos;
 namespace EasyAbp.UniappManagement.Uniapps
 {
     [RemoteService(Name = "EasyAbpUniappManagement")]
-    [Route("/api/uniappManagement/uniapp")]
+    [Route("/api/uniapp-management/uniapp")]
     public class UniappController : UniappManagementController, IUniappAppService
     {
         private readonly IUniappAppService _service;
