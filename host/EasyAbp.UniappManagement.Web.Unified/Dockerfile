@@ -1,11 +1,11 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["host/EasyAbp.UniappManagement.Web.Unified/EasyAbp.UniappManagement.Web.Unified.csproj", "host/EasyAbp.UniappManagement.Web.Unified/"]
 COPY ["host/EasyAbp.UniappManagement.Host.Shared/EasyAbp.UniappManagement.Host.Shared.csproj", "host/EasyAbp.UniappManagement.Host.Shared/"]
@@ -16,6 +16,7 @@ COPY ["src/EasyAbp.UniappManagement.Domain.Shared/EasyAbp.UniappManagement.Domai
 COPY ["src/EasyAbp.UniappManagement.Application/EasyAbp.UniappManagement.Application.csproj", "src/EasyAbp.UniappManagement.Application/"]
 COPY ["src/EasyAbp.UniappManagement.Domain/EasyAbp.UniappManagement.Domain.csproj", "src/EasyAbp.UniappManagement.Domain/"]
 COPY ["src/EasyAbp.UniappManagement.EntityFrameworkCore/EasyAbp.UniappManagement.EntityFrameworkCore.csproj", "src/EasyAbp.UniappManagement.EntityFrameworkCore/"]
+COPY Directory.Build.props .
 RUN dotnet restore "host/EasyAbp.UniappManagement.Web.Unified/EasyAbp.UniappManagement.Web.Unified.csproj"
 COPY . .
 WORKDIR "/src/host/EasyAbp.UniappManagement.Web.Unified"
