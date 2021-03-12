@@ -17,7 +17,7 @@ namespace EasyAbp.UniappManagement.Uniapps
 
         public virtual async Task<Uniapp> FindByNameAsync(string name, CancellationToken cancellationToken = default)
         {
-            return await GetQueryable().Where(app => app.Name == name.Trim() && app.IsAvailable)
+            return await (await GetQueryableAsync()).Where(app => app.Name == name.Trim() && app.IsAvailable)
                 .FirstOrDefaultAsync(cancellationToken: cancellationToken);
         }
     }
