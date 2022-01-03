@@ -12,7 +12,7 @@ using Volo.Abp.VirtualFileSystem;
 namespace EasyAbp.UniappManagement.Web
 {
     [DependsOn(
-        typeof(UniappManagementHttpApiModule),
+        typeof(UniappManagementApplicationContractsModule),
         typeof(AbpAspNetCoreMvcUiThemeSharedModule),
         typeof(AbpAutoMapperModule)
         )]

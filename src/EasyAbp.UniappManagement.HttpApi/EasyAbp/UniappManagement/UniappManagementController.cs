@@ -1,9 +1,11 @@
 ﻿using EasyAbp.UniappManagement.Localization;
+using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 
 namespace EasyAbp.UniappManagement
 {
-    public abstract class UniappManagementController : AbpController
+    [Area(UniappManagementRemoteServiceConsts.ModuleName)]
+    public abstract class UniappManagementController : AbpControllerBase
     {
         protected UniappManagementController()
         {

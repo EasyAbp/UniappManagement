@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Http.Client;
 using Volo.Abp.Modularity;
+using Volo.Abp.VirtualFileSystem;
 
 namespace EasyAbp.UniappManagement
 {
@@ -9,7 +10,7 @@ namespace EasyAbp.UniappManagement
         typeof(AbpHttpClientModule))]
     public class UniappManagementHttpApiClientModule : AbpModule
     {
-        public const string RemoteServiceName = "EasyAbpUniappManagement";
+        public const string RemoteServiceName = UniappManagementRemoteServiceConsts.RemoteServiceName;
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
@@ -17,6 +18,11 @@ namespace EasyAbp.UniappManagement
                 typeof(UniappManagementApplicationContractsModule).Assembly,
                 RemoteServiceName
             );
+            
+            Configure<AbpVirtualFileSystemOptions>(options =>
+            {
+                options.FileSets.AddEmbedded<UniappManagementHttpApiClientModule>();
+            });
         }
     }
 }

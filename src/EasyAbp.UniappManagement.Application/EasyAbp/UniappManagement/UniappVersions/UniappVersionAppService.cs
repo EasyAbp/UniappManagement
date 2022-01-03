@@ -29,9 +29,9 @@ namespace EasyAbp.UniappManagement.UniappVersions
             _uniappVersionRepository = uniappVersionRepository;
         }
 
-        protected override IQueryable<UniappVersion> CreateFilteredQuery(UniappVersionGetListDto input)
+        protected override async Task<IQueryable<UniappVersion>> CreateFilteredQueryAsync(UniappVersionGetListDto input)
         {
-            return base.CreateFilteredQuery(input).Where(v => v.AppId == input.AppId);
+            return (await base.CreateFilteredQueryAsync(input)).Where(v => v.AppId == input.AppId);
         }
 
         public virtual async Task<UniappVersionDto> GetPublicLatestAsync(Guid appId)

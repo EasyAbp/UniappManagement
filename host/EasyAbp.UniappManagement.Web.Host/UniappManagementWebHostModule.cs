@@ -27,6 +27,7 @@ using Volo.Abp.AutoMapper;
 using Volo.Abp.Caching;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Http.Client.IdentityModel.Web;
+using Volo.Abp.Http.Client.Web;
 using Volo.Abp.Identity;
 using Volo.Abp.Identity.Web;
 using Volo.Abp.Modularity;
@@ -51,6 +52,7 @@ namespace EasyAbp.UniappManagement
         typeof(AbpAspNetCoreMvcUiBasicThemeModule),
         typeof(AbpAutofacModule),
         typeof(AbpHttpClientIdentityModelWebModule),
+        typeof(AbpHttpClientWebModule),
         typeof(AbpIdentityWebModule),
         typeof(AbpIdentityHttpApiClientModule),
         typeof(AbpTenantManagementWebModule),
@@ -59,7 +61,7 @@ namespace EasyAbp.UniappManagement
         typeof(AbpFeatureManagementWebModule),
         typeof(AbpPermissionManagementHttpApiClientModule),
         typeof(AbpAspNetCoreSerilogModule)
-        )]
+    )]
     public class UniappManagementWebHostModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
