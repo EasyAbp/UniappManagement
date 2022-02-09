@@ -10,11 +10,11 @@ namespace EasyAbp.UniappManagement.HttpApi.Client.ConsoleTestApp
     {
         public async Task StartAsync(CancellationToken cancellationToken)
         {
-            using (var application = AbpApplicationFactory.Create<UniappManagementConsoleApiClientModule>())
+            using (var application = await AbpApplicationFactory.CreateAsync<UniappManagementConsoleApiClientModule>())
             {
-                application.Initialize();
+                await application.InitializeAsync();
 
-                application.Shutdown();
+                await application.ShutdownAsync();
             }
         }
 
