@@ -3,14 +3,16 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
 using Volo.Abp.EntityFrameworkCore;
+using Volo.Abp.EntityFrameworkCore.Sqlite;
 using Volo.Abp.Modularity;
 
 namespace EasyAbp.UniappManagement.EntityFrameworkCore
 {
     [DependsOn(
         typeof(UniappManagementTestBaseModule),
-        typeof(UniappManagementEntityFrameworkCoreModule)
-        )]
+        typeof(UniappManagementEntityFrameworkCoreModule),
+        typeof(AbpEntityFrameworkCoreSqliteModule)
+    )]
     public class UniappManagementEntityFrameworkCoreTestModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
