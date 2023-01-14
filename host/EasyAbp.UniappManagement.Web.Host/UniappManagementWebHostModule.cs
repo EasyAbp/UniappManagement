@@ -35,6 +35,8 @@ using Volo.Abp.MultiTenancy;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.PermissionManagement.Web;
 using Volo.Abp.Security.Claims;
+using Volo.Abp.SettingManagement;
+using Volo.Abp.SettingManagement.Web;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.Web;
 using Volo.Abp.UI.Navigation.Urls;
@@ -57,6 +59,8 @@ namespace EasyAbp.UniappManagement
         typeof(AbpIdentityHttpApiClientModule),
         typeof(AbpTenantManagementWebModule),
         typeof(AbpTenantManagementHttpApiClientModule),
+        typeof(AbpSettingManagementHttpApiClientModule),
+        typeof(AbpSettingManagementWebModule),
         typeof(AbpFeatureManagementHttpApiClientModule),
         typeof(AbpFeatureManagementWebModule),
         typeof(AbpPermissionManagementHttpApiClientModule),
