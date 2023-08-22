@@ -20,7 +20,8 @@ namespace EasyAbp.UniappManagement.Web.Menus
         {
             var l = context.GetLocalizer<UniappManagementResource>();            //Add main menu items.
 
-            var uniappManagementMenuItem = new ApplicationMenuItem(UniappManagementMenus.Prefix, l["Menu:UniappManagement"]);
+            var uniappManagementMenuItem = new ApplicationMenuItem(UniappManagementMenus.Prefix,
+                l["Menu:UniappManagement"], icon: "fa fa-rocket");
             
             if (await context.IsGrantedAsync(UniappManagementPermissions.Uniapps.Default))
             {
@@ -31,7 +32,7 @@ namespace EasyAbp.UniappManagement.Web.Menus
 
             if (!uniappManagementMenuItem.Items.IsNullOrEmpty())
             {
-                context.Menu.AddItem(uniappManagementMenuItem);
+                context.Menu.GetAdministration().AddItem(uniappManagementMenuItem);
             }
         }
     }
