@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.10" />
     <ProjectReference Include="..\..\src\EasyAbp.UniappManagement.EntityFrameworkCore\EasyAbp.UniappManagement.EntityFrameworkCore.csproj" />
     <ProjectReference Include="..\EasyAbp.UniappManagement.TestBase\EasyAbp.UniappManagement.TestBase.csproj" />
     <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="$(AbpVersion)" />
