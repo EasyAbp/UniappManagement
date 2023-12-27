@@ -8,10 +8,6 @@
 
 实现uni-app的应用版本管理、整包更新、热更新、差量热更新等功能的Abp应用模块
 
-## Online Demo
-
-We have launched an online demo for this module: [https://uniapp.samples.easyabp.io](https://uniapp.samples.easyabp.io)
-
 ## Installation
 
 1. Install the following NuGet packages. ([see how](https://github.com/EasyAbp/EasyAbpGuide/blob/master/docs/How-To.md#add-nuget-packages))
