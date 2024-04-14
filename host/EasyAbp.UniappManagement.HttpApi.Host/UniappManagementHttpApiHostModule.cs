@@ -172,7 +172,7 @@ namespace EasyAbp.UniappManagement
         
         private void ConfigureConventionalControllers()
         {
-            Configure<AbpAspNetCoreMvcOptions>(options =>
+            PreConfigure<AbpAspNetCoreMvcOptions>(options =>
             {
             });
         }
